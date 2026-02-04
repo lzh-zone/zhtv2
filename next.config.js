@@ -8,6 +8,7 @@ const nextConfig = {
 
   reactStrictMode: false,
   swcMinify: true,
+  transpilePackages: ['swiper'],
 
   // Uncoment to add domain whitelist
   images: {

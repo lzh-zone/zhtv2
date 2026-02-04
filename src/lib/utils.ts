@@ -98,7 +98,9 @@ function decodeHtmlEntities(text: string): string {
     .replace(/&apos;/g, "'")
     .replace(/&nbsp;/g, ' ')
     .replace(/&#(\d+);/g, (_, num) => String.fromCharCode(parseInt(num, 10)))
-    .replace(/&#x([a-fA-F0-9]+);/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
+    .replace(/&#x([a-fA-F0-9]+);/g, (_, hex) =>
+      String.fromCharCode(parseInt(hex, 16))
+    );
 }
 
 export function cleanHtmlTags(text: string): string {

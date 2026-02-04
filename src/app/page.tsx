@@ -18,6 +18,7 @@ import { DoubanItem } from '@/lib/types';
 
 import CapsuleSwitch from '@/components/CapsuleSwitch';
 import ContinueWatching from '@/components/ContinueWatching';
+import HomeCarousel from '@/components/HomeCarousel';
 import PageLayout from '@/components/PageLayout';
 import ScrollableRow from '@/components/ScrollableRow';
 import { useSite } from '@/components/SiteProvider';
@@ -210,6 +211,9 @@ function HomeClient() {
           ) : (
             // 首页视图
             <>
+              {/* 轮播图 */}
+              <HomeCarousel items={hotMovies} />
+
               {/* 继续观看 */}
               <ContinueWatching />
 
